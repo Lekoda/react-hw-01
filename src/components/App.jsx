@@ -13,7 +13,8 @@ export const App = () => {
         avatar={user.avatar}
         stats={user.stats}
       />
-      <Statistics title="Upload stats" stats={data.stats} />
+      <Statistics title="Upload stats" stats={data} />
+
       <GlobalStyled />
     </div>
   );

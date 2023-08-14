@@ -1,13 +1,15 @@
 import { StatItem } from '../StatItem/StatItem';
+import { List } from './StatList.styled';
+import { Item } from './StatList.styled';
 
-export const StatList = ({ items }) => {
+export const StatList = ({ stats }) => {
   return (
-    <ul class="stat-list">
-      {items.map(item => (
-        <li class="item" key={item.id}>
-          <StatItem {...items} />
-        </li>
+    <List>
+      {stats.map(({ id, label, percentage }) => (
+        <Item key={id}>
+          <StatItem label={label} percentage={percentage} />
+        </Item>
       ))}
-    </ul>
+    </List>
   );
 };

@@ -1,8 +1,11 @@
-export const StatItem = ({ item: { label, percentage } }) => {
+import { Label } from './StatItem.styled';
+import { Percentage } from './StatItem.styled';
+
+export const StatItem = ({ label, percentage }) => {
   return (
     <>
-      <span class="label">.{label}</span>
-      <span class="percentage">{percentage}%</span>
+      <Label>{label}</Label>
+      <Percentage>{percentage}%</Percentage>
     </>
   );
 };

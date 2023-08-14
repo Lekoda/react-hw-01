@@ -1,10 +1,12 @@
 import { StatList } from '../StatList/StatList';
+import { StatWrapper } from './Statisctics.styled';
+import { Title } from './Statisctics.styled';
 
-export const Statistics = ({ title }) => {
+export const Statistics = ({ title, stats }) => {
   return (
-    <section class="statistics">
-      {title && <h2 class="title">{title}</h2>}
-      <StatList />
-    </section>
+    <StatWrapper>
+      {title && <Title>{title}</Title>}
+      <StatList stats={stats} />
+    </StatWrapper>
   );
 };
